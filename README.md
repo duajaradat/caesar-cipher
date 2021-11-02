@@ -8,8 +8,8 @@ Du'a Jaradat
 
 ## Links and Resources
 
-- [Web Scraping Code]()
-- [Pull Request]()
+- [Caesar Cipher Code](https://github.com/duajaradat/caesar-cipher/blob/caeser_cipher/caesar_cipher/caesar-cipher.py)
+- [Pull Request](https://github.com/duajaradat/caesar-cipher/pull/1)
 
 ---
 
