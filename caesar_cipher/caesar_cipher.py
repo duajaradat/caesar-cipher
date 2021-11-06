@@ -76,7 +76,8 @@ def crack(text_to_decrypt : str):
         if percentage > 50:
             print(phrase,percentage)           
             return " ".join(phrase)
-
+        
+    return ""
     
 
 
