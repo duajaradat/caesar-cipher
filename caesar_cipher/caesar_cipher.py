@@ -1,8 +1,8 @@
-import nltk
-from nltk.corpus import words , names
+# import nltk
+# from nltk.corpus import words , names
 
-nltk.download('words',quiet=True)
-nltk.download('names',quiet=True)
+# nltk.download('words',quiet=True)
+# nltk.download('names',quiet=True)
 
 
 def encrypt(text :str,key :int):
@@ -28,7 +28,7 @@ def encrypt(text :str,key :int):
                 shifted_number+=26 
 
         if (ord(char) >=65 and ord(char) <=90 ) or (ord(char) >=97 and ord(char) <=122): 
-            encrypted_char=char(shifted_number) 
+            encrypted_char=chr(shifted_number) 
         else:
             encrypted_char=char       
 
