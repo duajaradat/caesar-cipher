@@ -1,8 +1,8 @@
-# import nltk
-# from nltk.corpus import words , names
 
-# nltk.download('words',quiet=True)
-# nltk.download('names',quiet=True)
+import nltk
+from nltk.corpus import words , names
+
+
 
 
 def encrypt(text :str,key :int):
@@ -36,10 +36,50 @@ def encrypt(text :str,key :int):
 
     return encrypted_message
 
-def decrypt(decrypt_text : str , key :int):
+def decrypt(text_to_decrypt : str , key :int):
     """
     decrypt function that takes in encrypted text and numeric shift which will restore the encrypted text back to its original form when correct key is supplied.
     Arguments: text as a string
     Returns : decrypted message as a string
     """   
-    return encrypt(decrypt_text , -key) 
+    return encrypt(text_to_decrypt , -key) 
+
+def crack(text_to_decrypt : str):
+    """
+    crack function that will decode the cipher so that an encrypted message can be transformed into its original state WITHOUT access to the key.
+    Arguments: text to decrypt as a string.
+    Returns: decrypted message as a string
+    """
+    nltk.download('words',quiet=True)
+    nltk.download('names',quiet=True)
+
+    names_list = names.words() # first letter is uppercase
+    # print(names_list) 
+    words_list = words.words()  # all words in lowercase
+    # print(words_list) 
+    candidates =[]
+    for i in range(26):
+        decrypted=decrypt(text_to_decrypt ,i)
+        candidates.append(decrypted)
+
+    for candidate in candidates:
+        phrase = candidate.split(' ')
+   
+        words_counter = 0
+        for word in phrase:
+            if word.lower() in words_list or word.lower() in names_list:
+                words_counter+=1
+
+        words_of_candidate=len(phrase)
+        percentage = (words_counter/words_of_candidate)*100
+
+        if percentage > 50:
+            print(phrase,percentage)           
+            return " ".join(phrase)
+
+    
+
+
+if __name__ == '__main__':
+    crack("Te hld esp mpde zq etxpd, te hld esp hzcde zq etxpd.") 
+    # pass   

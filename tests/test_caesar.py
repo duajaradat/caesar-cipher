@@ -1,4 +1,4 @@
-from caesar_cipher.caesar_cipher import encrypt ,decrypt
+from caesar_cipher.caesar_cipher import encrypt ,decrypt ,crack
 
 
 def test_encrypt_shift_1():
@@ -42,4 +42,6 @@ def test_decrypt_with_whitespace():
 def test_decrypt_uppercase():
     actual = decrypt("LKXKXK", 10)
     expected = "BANANA"
-    assert actual == expected    
+    assert actual == expected  
+
+     
