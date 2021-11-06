@@ -33,3 +33,8 @@ def test_round_trip():
     actual = decrypt(encrypted, shift)
     expected = original
     assert actual == expected        
+
+def test_decrypt_with_whitespace():
+    actual = decrypt("bqqmft boe cbobobt", 1)
+    expected = "apples and bananas"
+    assert actual == expected     
