@@ -38,3 +38,8 @@ def test_decrypt_with_whitespace():
     actual = decrypt("bqqmft boe cbobobt", 1)
     expected = "apples and bananas"
     assert actual == expected     
+
+def test_decrypt_uppercase():
+    actual = decrypt("LKXKXK", 10)
+    expected = "BANANA"
+    assert actual == expected    
