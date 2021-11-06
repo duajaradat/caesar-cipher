@@ -8,7 +8,7 @@ Du'a Jaradat
 
 ## Links and Resources
 
-- [Caesar Cipher Code](https://github.com/duajaradat/caesar-cipher/blob/caeser_cipher/caesar_cipher/caesar-cipher.py)
+- [Caesar Cipher Code](https://github.com/duajaradat/caesar-cipher/blob/caeser_cipher/caesar_cipher/caesar_cipher.py)
 - [Pull Request](https://github.com/duajaradat/caesar-cipher/pull/1)
 
 ---

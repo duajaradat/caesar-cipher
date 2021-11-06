@@ -35,3 +35,11 @@ def encrypt(text :str,key :int):
         encrypted_message+=encrypted_char 
 
     return encrypted_message
+
+def decrypt(decrypt_text : str , key :int):
+    """
+    decrypt function that takes in encrypted text and numeric shift which will restore the encrypted text back to its original form when correct key is supplied.
+    Arguments: text as a string
+    Returns : decrypted message as a string
+    """   
+    return encrypt(decrypt_text , -key) 
