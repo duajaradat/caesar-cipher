@@ -1,4 +1,4 @@
-from caesar_cipher.caesar_cipher import encrypt
+from caesar_cipher.caesar_cipher import encrypt ,decrypt
 
 
 def test_encrypt_shift_1():
@@ -24,4 +24,12 @@ def test_with_whitespace():
 def test_with_non_alpha():
     actual = encrypt("Gimme a 1!", 1)
     expected = "Hjnnf b 1!"
-    assert actual == expected    
+    assert actual == expected
+
+def test_round_trip():
+    original = "Gimme a 1!"
+    shift = 5
+    encrypted = encrypt(original, shift)
+    actual = decrypt(encrypted, shift)
+    expected = original
+    assert actual == expected        
