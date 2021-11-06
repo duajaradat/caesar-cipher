@@ -15,3 +15,8 @@ def test_uppercase():
     actual = encrypt("BANANA", 10)
     expected = "LKXKXK"
     assert actual == expected
+
+def test_with_whitespace():
+    actual = encrypt("apples and bananas", 1)
+    expected = "bqqmft boe cbobobt"
+    assert actual == expected    
